@@ -1,0 +1,65 @@
+.features {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+}
+
+.featureList {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feature {
+  background-color: #fcfcfc; /* Updated box color for light mode */
+  border-radius: 8px;
+  padding: 1rem;
+  flex-basis: calc(33.33% - 1rem);
+  margin-right: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.feature:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-decoration: none; /* Added to remove underline on hover */
+}
+
+.feature a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.featureSvg {
+  height: 200px;
+  width: 200px;
+}
+
+/* Add the following styles to adapt to dark mode */
+[data-theme='dark'] .feature {
+  background-color: #3d3d3d; /* Updated box color for dark mode */
+}
+
+[data-theme='dark'] .feature:hover {
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+[data-theme='dark'] .feature a {
+  color: #fcfcfc; /* Updated text color for dark mode */
+}
+
+[data-theme='light'] .feature a {
+  color: black; /* Updated text color for light mode */
+}
+
+/* Add the following styles to update the text color in light mode */
+[data-theme='light'] .feature h3,
+[data-theme='light'] .feature p {
+  color: black;
+}
+
+/* Add the following styles to update the text color in dark mode */
+[data-theme='dark'] .feature h3,
+[data-theme='dark'] .feature p {
+  color: #fcfcfc;
+}
